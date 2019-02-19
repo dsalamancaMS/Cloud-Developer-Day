@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+
+<head>
+     <title>Python Web App</title>
+     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+	 <link href="static/css/site.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="cloud-image">
+            <img src="static/img/Azure_Gophers.png" />
+        </div>
+        <div class="content">
+            <div class="tweet-container">
+            <a href="http://twitter.com/intent/tweet/?text=I%20just%20created%20a%20new%20Go%20webapp%20on%20Azure%20using%20Azure%20DevOps%20Project&hashtags=AzureDevOpsProject%2CVSTS%20%40Azure%20%40VSTS">
+                <img src="static/img/tweetThis.svg" />
+            </a>            
+        </div>
+            <div class="content-body">
+                <div class="success-text">{{message}}</div>
+                <div class="description line-1"> Deployed via Azure DevOps v3</div>
+                <div class="description line-2"> {{language}} is Ready!</div>
+                <div class="next-steps-container">
+                    <div class="next-steps-header">Fetching SQL Data:</div>
+                    <table class="table-border">
+                    <tr class="thead01">
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        </tr>
+                    {% for item in data %}
+                    <tr class="trow">
+                        <td class="trow">{{item[0]}}</td>
+                        <td class="trow">{{item[1]}}</td>
+                        <td class="trow">{{item[2]}}</td>
+                        <td class="trow">{{item[3]}}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
