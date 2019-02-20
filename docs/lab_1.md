@@ -55,3 +55,7 @@ Perfom this steps on the **Lab Workstation**:
 10. Once it finished, in your SQL Management studio click on **Connect**   and enter your Azure SQL credentials. You should be able to see the migrated database now:
     
   ![newdb](img/lab1/newdb.png)
+
+  Now lets continue to our next Lab.
+
+  [Next >](lab_2.md)

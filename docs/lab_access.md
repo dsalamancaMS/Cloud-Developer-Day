@@ -20,4 +20,4 @@ To access the lab, follow the next instructions:
 
 Our next steps will consist of starting our journey to the cloud.
 
-[Next >>](lab_1.md)
+[Next >](lab_1.md)
