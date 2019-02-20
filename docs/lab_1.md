@@ -1,4 +1,4 @@
-# Part 1 - Database Migration
+# Lab 1 - Database Migration
 
 In this section of the lab we will migrate our application into a Platform as a Service (PaaS) model. We will be using the Deploy to Azure  method from MS SQL Server Management Studio.
 
