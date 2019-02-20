@@ -1,5 +1,0 @@
-export DB_SERVER=pydemo.database.windows.net
-export DB_USER=pydemoadmin
-export DB_NAME=pydemo
-export DB_PASS=WorkWork123!
-export HOSTNAME=MAC
