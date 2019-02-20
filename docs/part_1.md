@@ -53,4 +53,5 @@ Perfom this steps on the **Lab Workstation**:
 8. Click on **Next**, review the summary and click **Finish**.
 9. Wait for all tasks to finish:![progress](img/progressdb.png)
 10. Once it finished, in your SQL Management studio click on **Connect**   and enter your Azure SQL credentials. You should be able to see the migrated database now:
+    
   ![newdb](img/newdb.png)
