@@ -21,7 +21,7 @@ Perform this steps in either your **own** Workstation or on the **Lab** Workstat
 
   3. Click on ![add](img/adddb.png) to  create a new SQL Server.
   4. Under **Project Details** select your subscription and create a new resource group named: *"pysql"*.
-  5. Under **Database Details** name the database: *"pydb"*.
+  5. Under **Database Details** name the database: *"pydb"*. ![azuredb](img/createdbazure.png)
   6. On **Server** select **Create new**, a new pane will be open, fill it out with the following information:
    * **Server Name**: "labuser#"
    * **Server admin login**: "labuser#"
