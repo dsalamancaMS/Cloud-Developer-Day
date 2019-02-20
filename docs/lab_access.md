@@ -1,6 +1,8 @@
-## Accesing the lab
+# Accesing the lab
 
 For this lab we will be using [Azure Lab Services](https://azure.microsoft.com/en-us/services/lab-services/). Azure Lab Services lets you create managed labs, such as classroom labs. The service itself handles all the infrastructure management for a managed lab, from spinning up VMs to handling errors, and scaling the infrastructure. The managed labs are currently in preview. Once the preview ends, the new lab types and existing DevTest Labs come under the new common umbrella name of Azure Lab Services where all lab types continue to evolve.
+
+## Instructions
 
 To access the lab, follow the next instructions:
 
@@ -12,3 +14,10 @@ To access the lab, follow the next instructions:
   ![alt text](img/connect_vm.png)
   
   6. Password will be provided by the instructor.
+  7. Activate your Azure Pass following the [HowTo Guide](https://www.microsoftazurepass.com/Home/HowTo)
+
+## Next Steps
+
+Our next steps will consist of starting our journey to the cloud.
+
+[Next >>](lab_1.md)
