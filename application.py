@@ -18,7 +18,7 @@ def estus_flask():
     cursor.execute("SELECT TOP 5 FirstName, LastName, EmailAddress, Phone FROM SalesLT.Customer")
     data = cursor.fetchall()
     message = "Hello " + os.getenv("HOSTNAME")
-    return render_template("index.html", message=message, language="Python",data=data)
+    return render_template("index.html", message=message, language="Python")
 
 @app.route("/work")
 def memory_load():
