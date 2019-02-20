@@ -1,4 +1,4 @@
-# Part 1 - Platform as a Service
+# Part 1 - Database Migration
 
 In this section of the lab we will migrate our application into a Platform as a Service (PaaS) model. We will be using the Deploy to Azure  method from MS SQL Server Management Studio.
 
@@ -11,9 +11,9 @@ In this section of the lab we will migrate our application into a Platform as a 
   - [Microsoft SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-2017)
   
 
-## Database Migration
+## Creating a Hosting Azure SQL Database
 
-Once you RDP back to the workstation follow the next instructions to migrate the SQL database to the managed Azure SQL service:
+Perform this steps in either your **own** Workstation or on the **Lab** Workstation:
 
   1. Login to your Azure Portal.
   2. In the Azure Portal click on the *"All services"* option and look for SQL, select *"SQL databases"*.
@@ -36,8 +36,20 @@ Once you RDP back to the workstation follow the next instructions to migrate the
   12. Click on **Apply**.
   13. Click **Review + Create**.
 
-  14. Open Microsoft SQL Server Management Studio 17 from the icon in your desktop:
-   ![image](img/sqlmgmt_icon.png)
+## Migrating the Database
 
-1. Login with the credentials and the IP provided by the instructor.
-2. b.
+Perfom this steps on the **Lab Workstation**:
+
+  1. Open Microsoft SQL Server Management Studio 17 from the icon in your desktop:
+   ![mssqlms](img/sqlmgmt_icon.png)
+
+2. Login with the credentials and the IP provided by the instructor.
+3. You should be able to see a list of databases ready for migration:  
+  ![dblist](img/dblist.png)
+4. Select the database corresponding to the **user number** assigned to you and right click on it.
+5. Select **Tasks > Deploy Database to Microsoft Azure SQL Database..**: ![deploytask](img/deploytask.png)
+6. You will be prompted with the **Introduction**, click **Next**.
+7. Under **Deployment Settings**, click on Connect and enter the credentials of your recently created **Azure SQL Server**, leave the new Database name the same. ![sqlsettings](img/sqlmigsettings.png)
+8. Click on **Next**, review the summary and click **Finish**.
+9. Wait for all tasks to finish:![progress](img/progressdb.png)
+10. Once it finished, in your SQL Management studio click on **Connect**   and enter your Azure SQL credentials. You should be able to see the migrated database now:![newdb](img/newdb.png)
