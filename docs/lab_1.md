@@ -16,7 +16,7 @@ In this section of the lab we will migrate our application into a Platform as a 
 Perform this steps in either your **own** Workstation or on the **Lab** Workstation:
 
   1. Login to your Azure Portal.
-  2. In the Azure Portal click on the *"All services"* option and look for SQL, select *"SQL databases"*.
+  2. In the Azure Portal click on the **All services** option and look for SQL, select **SQL databases**.
    ![azuresqlsvc](img/lab1/azure_sql_svc.png)
 
   3. Click on ![add](img/lab1/adddb.png) to  create a new SQL Server.
