@@ -54,5 +54,6 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
 9. In the Extensions Marketplace look for the Azure Account Extension and click on **Install**: ![azracnt](img/lab2/azureaccnt.png)
 10. Do the same as in the previous step but for the Azure App Service Extension: ![appsvc](img/lab2/appsvc.png)
     
-11. Once both extensions have been installed, an Azure icon will appear on the left: ![azr](img/lab2/azricn.png). Click on it and login to your subscription.
+11. Once both extensions have been installed, an Azure icon will appear on the left: ![azr](img/lab2/azricn.png). Click on it and login to your subscription:
+    
    ![login](img/lab2/login.png)
