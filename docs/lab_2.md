@@ -56,4 +56,4 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
     
 11. Once both extensions have been installed, an Azure icon will appear on the left: ![azr](img/lab2/azricn.png). Click on it and login to your subscription:
     
-   ![login](img/lab2/login.png)
+  <img src="img/lab2/login.png" alt="login" align="middle">
