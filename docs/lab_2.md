@@ -55,5 +55,5 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
 10. Do the same as in the previous step but for the Azure App Service Extension: ![appsvc](img/lab2/appsvc.png)
     
 11. Once both extensions have been installed, an Azure icon will appear on the left: ![azr](img/lab2/azricn.png). Click on it and login to your subscription:
-    
-  <img src="img/lab2/login.png" alt="login" align="middle">
+   
+    ![login](img/lab2/login.png)
