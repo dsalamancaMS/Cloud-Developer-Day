@@ -1,17 +1,16 @@
 # Lab 1 - Database Migration
 
-In this section of the lab we will migrate our application into a Platform as a Service (PaaS) model. We will be using the Deploy to Azure  method from MS SQL Server Management Studio.
+In this section of the lab we will migrate our Monolytic's app database into a Platform as a Service (PaaS) model. We will be using the Deploy to Azure method from MS SQL Server Management Studio.
 
-## Tools used in this section
+## Tools used in this lab
 
-  - [Visual Studio Code](https://code.visualstudio.com/)
-  - [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/enterprise)
-  - [Microsoft Azure App Service](https://azure.microsoft.com/en-us/services/app-service/?v=18.51)
   - [Microsoft Azure SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-technical-overview)
   - [Microsoft SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-2017)
   
 
 ## Creating a Hosting Azure SQL Database
+
+In this set of steps you are tasked to migrate an existing database running on a Linux Physical Server. You are given all the necessary credentials and the name of the database in order to perform this task.
 
 Perform this steps in either your **own** Workstation or on the **Lab** Workstation:
 
