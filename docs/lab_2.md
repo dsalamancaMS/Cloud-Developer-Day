@@ -57,3 +57,49 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
 11. Once both extensions have been installed, an Azure icon will appear on the left: ![azr](img/lab2/azricn.png). Click on it and login to your subscription:
    
     ![login](img/lab2/login.png)
+
+12. Before migrating our application we need to do some modifications, create a requirements.txt file with the following content:
+       ```
+        Flask>=1.0.2
+        pyodbc==4.0.24
+      ```
+13. Delete the *envs* file.
+14. Rename *estusflask.py* to *application.py*
+15. Modify the file *templates >  index.html* to reflect the following:
+    
+    ![text](img/lab2/text.png)
+
+16. Save the changes on all files modified so far:
+    * requirements.txt
+    * index.html
+
+17. To deploy the application click back on the Azure Icon: ![azr](img/lab2/azricn.png)
+18. Click on the **+** sign next to **Azure: App Service** and follow the prompts: ![plus](img/lab2/plussgn.png)
+19. Wait for the **Creating Web App** message to finish and click on **Yes** once the **Deploy to web app?** appears: 
+    
+    ![deploy](img/lab2/finishapp.png)
+
+20. Click on the app folder to deploy: 
+ 
+    ![deploy](img/lab2/deploy.png)
+
+22. Browse to your application.
+
+21. Inform your instructor that you have reached this step.
+
+22. Comment the following lines on *application.py* and remove the data=data entry, finally save the file:
+
+    ![code](img/lab2/code.png)
+
+23. Open the **Azure Portal** and under all services look for **App Service** and select your **Web App**.
+
+24. Under **Settings** click on **Application Setttings** and scroll down to **App Settings Name** add the key *HOSTNAME* with the value of your name: 
+    
+    ![var](img/lab2/VAR.png)
+
+25. Back in **Visual Studio Code** click on deploy to web app and follow the prompts selecting your web app: 
+
+    ![rede](img/lab2/redep.png)
+
+26. Browse to your application. 
+    
