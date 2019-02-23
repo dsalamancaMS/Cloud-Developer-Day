@@ -1,4 +1,4 @@
-# Lab 3 - Containerizing the application
+# Lab 3 - Part 1 - Containerizing the application
 
 
 
@@ -13,6 +13,7 @@
 
 ## Modernizing with Containers
 
+### Part 1
 
 1. Back in **Visual Studio Code** create a new file called *Dockerfile* and copy the following into the file(Remember to save the file):
    
@@ -78,7 +79,7 @@
 3. Go back to your Windows Subsystem for Linux Prompt and type the following command:
    
    ```Docker
-    docker image build -t <yourLabUserName:local> .
+    docker image build -t application:local .
    ```
 
 4. Wait for the build to finish and once finished type the following command to run the container, the fields after -e you can get them from your **Azure SQL Database** :
@@ -88,7 +89,7 @@
         -e DB_SERVER=<dbserver> \
         -e DB_USER=<dbuser> \
         -e DB_PASS=<password> \
-        <yourLabUserName:local>
+        application:local
     ```
 
 
@@ -111,10 +112,10 @@
 
     az acr login -n <MyRegistry>
 
-    docker image tag <yourLabUserName>:local \
-        <MyRegistry>.azurecr.io/<yourLabUsername>:v1
+    docker image tag application:local \
+        <MyRegistry>.azurecr.io/application:mono
 
-    docker image push <MyRegistry>.azurecr.io/<yourLabUsername>:v1
+    docker image push <MyRegistry>.azurecr.io/application:mono
     ```
 
 8. Now that you have pushed the image, check the **Azure Container Registry** in the **Azure Portal** and see if the image is  listed under **Repositories**:
@@ -125,6 +126,7 @@
     
     ```Bash
     az group create -l eastus -n AKS
+
     az aks create \
       --resource-group AKS \
       --name LabAKS \
@@ -139,4 +141,8 @@
     az aks install-cli
 
     az aks get-credentials -g AKS --name LabAKS
+
+    kubectl get nodes
     ```
+
+[Next >](lab_3_1.md)
