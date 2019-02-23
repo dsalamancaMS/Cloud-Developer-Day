@@ -103,3 +103,4 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
 
 26. Browse to your application. 
     
+    [Next >](lab_3.md)
