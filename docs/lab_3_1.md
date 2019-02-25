@@ -98,7 +98,7 @@
 
   ```Docker
 
-  docker image build -t <MyRegistry>.azurecr.io/application:micro
+  docker image build -t <MyRegistry>.azurecr.io/application:micro .
 
   docker image push <MyRegistry>.azurecr.io/application:micro
 
@@ -106,21 +106,51 @@
 
 7. Now both images are in our private registry, in **Visual Studio Code** create a folder called *kubernetes*.
 
-8. To be able to pull images out of our private registry we need to create credenitals:
+8. To be able to pull images out of our private registry we need to authorize our kubernetes cluster to access **ACR**, run the following commands in your bash shell, modify ACR_NAME with your registry name:
 
   ```bash
-    az acr update -n <MyRegistry> --admin-enabled true
-    
-    az acr credential show -n <MyRegistry> -o table
-    ```
-9. Save any of the passwords shown in the output of the last command.
-10. Run the following command for kubernetes to be able to pull images:
+    AKS_RESOURCE_GROUP=AKS
+    AKS_CLUSTER_NAME=LabAKS
+    ACR_RESOURCE_GROUP=ACR
+    ACR_NAME=testacrws
 
-  ```bash
-  kubectl create secret docker-registry acrcred \ 
-    --docker-server=https://myregistry.azurecr.io \
-    --docker-username=<MyRegistry> \
-    --docker-password=<ACR PASSWORD> \
-    --docker-email=ANY_EMAIL_ADDRESS
+    # Get the id of the service principal configured for AKS
+    CLIENT_ID=$(az aks show --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME --query "servicePrincipalProfile.clientId" --output tsv)
+
+    # Get the ACR registry resource id
+    ACR_ID=$(az acr show --name $ACR_NAME --resource-group $ACR_RESOURCE_GROUP --query "id" --output tsv)
+
+    # Create role assignment
+    az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
   ```
 
+9. We now need to create our DB credentials in the following way, run these commands in the Ubuntu prompt:
+
+      * echo -n '<db server url> | base64.
+      * Make a note of the encrypted string.
+      * Repeat this for the db name, db user and db password.
+
+  
+10. Create a file called db_creds.yml as follows:
+
+    ```YAML
+      apiVersion: v1
+      kind: Secret
+      metadata:
+        name: db-secrets
+      type: Opaque
+      data:
+          dbname: <base 64 encryption>
+          dbpass: <base 64 encryption>
+          dbserver: <base 64 encryption>
+          dbuser: <base 64 encryption>
+    ```
+  
+11. Lets proceed to create the Kubernetes definition, create a file called kube-deploy.yml with the conntents of: [kube-deploy.yml](/kube-deploy.yml). Replace *MyRegistry* with the name of your registry.
+
+12. Once you have saved the file, run **kubectl create -f kube-deploy.yml** to create the Kubernetes Deployment.
+
+13. Wait for a couple of minutes and run the following command to get the Public IP of your frontend:
+    ```Bash
+    kubectl get svc frontend-svc
+    ```

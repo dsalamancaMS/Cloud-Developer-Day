@@ -1,0 +1,111 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pysql-deploy-frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: pysql
+        image: <MyRegistry>.azurecr.io/application:micro
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "200m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        env:
+          - name: DB_SERVER
+            valueFrom:
+              secretKeyRef:
+                name: db-secrets
+                key: dbserver
+          - name: DB_NAME
+            valueFrom:
+              secretKeyRef:
+                name: db-secrets
+                key: dbname
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: db-secrets
+                key: dbuser
+          - name: DB_PASS
+            valueFrom:
+              secretKeyRef:
+                name: db-secrets
+                key: dbpass
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-svc
+  labels:
+    app: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pysql-deploy-backend
+  labels:
+    app: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: pysql
+        image: <MyRegistry>.azurecr.io/microload:micro
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "200m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: memload
+spec:
+  selector:
+    app: backend
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
