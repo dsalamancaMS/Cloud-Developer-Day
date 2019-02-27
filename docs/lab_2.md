@@ -108,7 +108,7 @@ app = Flask(__name__)
 @app.route("/")
 def estus_flask():
     cursor.execute("SELECT TOP 5 FirstName, LastName, EmailAddress, Phone FROM SalesLT.Customer")
-    data = cursor.fetchall()
+    #data = cursor.fetchall()
     message = "Hello " + os.getenv("HOSTNAME")
     return render_template("index.html", message=message, language="Python")
 

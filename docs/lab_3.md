@@ -15,7 +15,7 @@
 
 ### Part 1
 
-1. Back in **Visual Studio Code** create a new file called *Dockerfile* and copy the following into the file(Remember to save the file):
+1. Back in **Visual Studio Code** create a new file called **Dockerfile** and copy the following into the file(Remember to save the file):
    
    ```Docker
    FROM ubuntu:latest
