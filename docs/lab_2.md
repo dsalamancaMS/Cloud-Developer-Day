@@ -87,7 +87,7 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
 
 21. Inform your instructor that you have reached this step.
 
-22. Comment the following lines on *application.py* and remove the data=data entry on the first **return**, finally save the file:
+22. Comment the following lines on **application.py** and remove the **data=data** entry on the first **return**, finally save the file:
 
     ![code](img/lab2/code.png)
 
