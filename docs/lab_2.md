@@ -29,9 +29,9 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
   ```
  
 4. Check if the following files are present:
-   * static
-   * templates
-   * estusflask.py
+   * **static**
+   * **templates**
+   * **estusflask.py**
   
 5. Log out from the server by running: 
    ```bash
@@ -58,20 +58,20 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
    
     ![login](img/lab2/login.png)
 
-12. Before migrating our application we need to do some modifications, create a requirements.txt file with the following content:
+12. Before migrating our application we need to do some modifications, create a **requirements.txt** file with the following content:
        ```
         Flask>=1.0.2
         pyodbc==4.0.24
-      ```
-13. Delete the *envs* file.
-14. Rename *estusflask.py* to *application.py*
-15. Modify the file *templates >  index.html* to reflect the following:
+      ```*
+13. Delete the **envs** file.
+14. Rename **estusflask.py** to **application.py**
+15. Modify the file **templates >  index.html** to reflect the following:
     
     ![text](img/lab2/text.png)
 
 16. Save the changes on all files modified so far:
-    * requirements.txt
-    * index.html
+    * **requirements.txt**
+    * **index.html**
 
 17. To deploy the application click back on the Azure Icon: ![azr](img/lab2/azricn.png)
 18. Click on the **+** sign next to **Azure: App Service** and follow the prompts: ![plus](img/lab2/plussgn.png)

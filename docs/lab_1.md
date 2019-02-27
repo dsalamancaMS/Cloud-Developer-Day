@@ -42,13 +42,13 @@ Perfom this steps on the **Lab Workstation**:
   1. Open Microsoft SQL Server Management Studio 17 from the icon in your desktop:
    ![mssqlms](img/lab1/sqlmgmt_icon.png)
 
-2. Login with the credentials and the IP provided by the instructor.
+2. Login with the credentials and the IP provided by the instructor. **Use SQL Authentication**
 3. You should be able to see a list of databases ready for migration:  
   ![dblist](img/lab1/dblist.png)
 4. Select the database corresponding to the **user number** assigned to you and right click on it.
 5. Select **Tasks > Deploy Database to Microsoft Azure SQL Database..**: ![deploytask](img/lab1/deploytask.png)
 6. You will be prompted with the **Introduction**, click **Next**.
-7. Under **Deployment Settings**, click on Connect and enter the credentials of your recently created **Azure SQL Server**, leave the new Database name the same. ![sqlsettings](img/lab1/sqlmigsettings.png)
+7. Under **Deployment Settings**, click on **Connect** and enter the credentials of your recently created **Azure SQL Server**, leave the new Database name the same. ![sqlsettings](img/lab1/sqlmigsettings.png)
 8. Click on **Next**, review the summary and click **Finish**.
 9. Wait for all tasks to finish:![progress](img/lab1/progressdb.png)
 10. Once it finished, in your SQL Management studio click on **Connect**   and enter your Azure SQL credentials. You should be able to see the migrated database now:
