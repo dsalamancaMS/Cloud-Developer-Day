@@ -11,7 +11,7 @@ To access the lab, follow the next instructions:
   3. Log in or create a Microsoft account using the email provided to the instructor.
   4. Start the VM.
   5. Wait for the VM to start and click on *"Connect"* to download the RDP file:
-  ![alt text](img/connect_vm.png)
+  ![alt text](img/lab1/connect_vm.png)
   
   6. Password will be provided by the instructor.
   7. Activate your Azure Pass following the [HowTo Guide](https://www.microsoftazurepass.com/Home/HowTo)
