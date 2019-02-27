@@ -83,7 +83,7 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
  
     ![deploy](img/lab2/deploy.png)
 
-22. Browse to your application.
+22. Browse to your application website.
 
 21. Inform your instructor that you have reached this step.
 
