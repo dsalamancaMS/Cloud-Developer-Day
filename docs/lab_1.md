@@ -31,7 +31,7 @@ Perform this steps in either your **own** Workstation or on the **Lab** Workstat
   8. On **Want to use SQL elastic  pool?** select **no**.
   9. On **Compute + storage** click on **Configure database**.
   10. On the top left click on **Looking for basic, standard...**.
-  11. Select the following configuration:![basicdb](img/lab1/lab1/basicdb.png)
+  11. Select the following configuration:![basicdb](img/lab1/basicdb.png)
   12. Click on **Apply**.
   13. Click **Review + Create**.
 
