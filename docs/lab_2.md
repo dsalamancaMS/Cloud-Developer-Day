@@ -79,7 +79,7 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
     
     ![deploy](img/lab2/finishapp.png)
 
-20. Click on the app folder to deploy: 
+20. Click on the **app** folder to deploy: 
  
     ![deploy](img/lab2/deploy.png)
 
