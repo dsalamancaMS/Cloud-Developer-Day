@@ -138,7 +138,7 @@
 10. With the cluster deployed, proceed to install the Kubernetes CLI tool:
     
     ```Bash
-    az aks install-cli
+    sudo az aks install-cli
 
     az aks get-credentials -g AKS --name LabAKS
 
