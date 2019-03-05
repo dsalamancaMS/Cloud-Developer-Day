@@ -63,7 +63,7 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
         Flask>=1.0.2
         pyodbc==4.0.24
       ```
-      
+
 13. Delete the **envs** file.
 14. Rename **estusflask.py** to **application.py**
 15. Modify the file **templates >  index.html** to reflect the following:
@@ -74,7 +74,7 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
     * **requirements.txt**
     * **index.html**
 
-17. To deploy the application click back on the Azure Icon: ![azr](img/lab2/azricn.png)
+17. To deploy the application click back on the Azure Icon the unique name is **labuser<number>**: ![azr](img/lab2/azricn.png)
 18. Click on the **+** sign next to **Azure: App Service** and follow the prompts: ![plus](img/lab2/plussgn.png)
 19. Wait for the **Creating Web App** message to finish and click on **Yes** once the **Deploy to web app?** appears: 
     
