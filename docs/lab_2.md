@@ -62,7 +62,8 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
        ```
         Flask>=1.0.2
         pyodbc==4.0.24
-      ```*
+      ```
+      
 13. Delete the **envs** file.
 14. Rename **estusflask.py** to **application.py**
 15. Modify the file **templates >  index.html** to reflect the following:
