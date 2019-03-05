@@ -40,7 +40,7 @@ All the steps in this lab are performed in the Azure Lab Service workstation.
 6. Once you  are back on the WSL prompt, extract the files from the application server by running the following commands: 
    ```bash
    cd /mnt/c/Users/LabUser/Documents
-   mkdirk app
+   mkdir app
    cd app
    scp -r <user>@<ip>:/usr/local/flask/*  .
    ```
